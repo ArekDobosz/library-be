@@ -14,6 +14,7 @@ export class AuthorsService {
   }
 
   findAll() {
+    // TODO: add cursor pagination
     return this.databaseService.author.findMany({
       take: DEFAULT_PAGE_SIZE,
       include: { books: true },
